@@ -1,5 +1,4 @@
 name: Study React Workflow
-# Start the workflows when user push the code to github
 on: push
 jobs: 
     first-job:
