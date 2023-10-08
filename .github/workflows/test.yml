@@ -1,0 +1,17 @@
+name: Study React Workflow
+on: push
+jobs: 
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name : Get code
+              # check the repository we are using this code                    
+              uses : actions/checkout@v4.1.0
+            - name : Install NodeJs
+              uses : actions/setup-node@v3
+              with :
+                node-version : 20.3.1
+            - name : Install dependencies
+              run : npm ci # same with npm install but it locks the version 
+            - name : Run tests
+              run : npm test
