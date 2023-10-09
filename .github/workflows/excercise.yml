@@ -27,7 +27,7 @@ jobs:
             - name : Install dependencies
               run : npm ci # same with npm install but it locks the version 
             - name : Run eject
-              run: npm eject
+              run: npm run eject
     deploy: 
         needs: eject # Run jobs after each other, also if want to run more than one add the array []
         runs-on: ubuntu-latest
