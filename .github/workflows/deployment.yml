@@ -15,7 +15,8 @@ jobs:
               run : npm ci # same with npm install but it locks the version 
             - name : Run tests
               run : npm test
-    deploy:
+    deploy: 
+      needs: Install-and-test # Run jobs after each other, also if want to run more than one add the array []
       runs-on: ubuntu-latest
       steps:
         - name : Get code
